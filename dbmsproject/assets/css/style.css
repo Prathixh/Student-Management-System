@@ -1,0 +1,114 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul li a {
+    display: block;
+    padding: 12px 20px;
+    background-color: #282828;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #00ffff;
+}
+
+ul li a:hover {
+    background-color: #00ffff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #00c2c2;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: +#282828;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00ffff;
+}
+
+form .button {
+    align-self: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
